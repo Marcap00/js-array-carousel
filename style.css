@@ -12,20 +12,25 @@
     margin: 0 auto;
     padding: 5rem 0;
 }
-img {
-    max-height: 100%;
+#carousel img {
+    height: 100%;
     width: 100%;
     display: block;
 }
 
 /* # GENERICS */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
 
 
 /* # CAROUSEL */
 #carousel {
-    height: 500px;
+    height: 100%;
     width: 70%;
-    margin: 0 auto;
+    
     position: relative;
 }
 
@@ -35,7 +40,7 @@ img {
 }
 
 #gallery img {
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     display: none;
 }
 
@@ -61,5 +66,22 @@ img {
     right: 20px;
 }
 
+/* # THUMBNAILS */
+#thumbnails {
+    display: flex;
+    flex-direction: column;
+}
+
+#thumbnails img {
+    height: 100px;
+}
+
+#thumbnails img:first-child {
+    border-top-right-radius: 20px;
+}
+
+#thumbnails img:last-child {
+    border-bottom-right-radius: 20px;
+}
 
 
