@@ -33,21 +33,27 @@ console.log(images);
 
 // Assegnamo active alla prima immagine per vederla
 let activeIndex = 0;
-images[activeIndex].className = 'active';
+images[activeIndex].classList.add('active');
 
 // # Fase di gestione eventi
+// Mettiamo in ascolto il bottone sinistro
 leftButton.addEventListener('click', function () {
     images[activeIndex].classList.remove('active');
 
     activeIndex--;
 
+    if (activeIndex < 0) activeIndex = images.length - 1;
+    
     images[activeIndex].classList.add('active');
 })
 
+// Mettiamo in ascolto il bottone destro
 rightButton.addEventListener('click', function () {
     images[activeIndex].classList.remove('active');
-
+    
     activeIndex++;
+    
+    if (activeIndex === images.length) activeIndex = 0;
 
     images[activeIndex].classList.add('active');
 })
