@@ -1,5 +1,54 @@
+/* # CSS RESET */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+/* # UTILITIES */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* # GENERICS */
+#carousel {
+    min-height: 500px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#gallery {
+    position: relative;
+}
+
+/* #gallery img {
+    border-radius: 20px;
+} */
+
+#gallery i {
+    color: white;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#left {
+    left: 20px;
+}
+
+#right {
+    right: 20px;
+}
+
+
+
