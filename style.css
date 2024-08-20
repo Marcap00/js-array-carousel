@@ -58,6 +58,15 @@
     transform: translateY(-50%);
 }
 
+#carousel i:hover {
+    scale: 1.06;
+    text-shadow: 0 0 10px #fff;
+}
+
+#carousel i:active {
+    scale: 1;
+}
+
 #left {
     left: 20px;
 }
@@ -74,6 +83,32 @@
 
 #thumbnails img {
     height: 100px;
+    filter: grayscale(1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+#thumbnails img.active {
+    filter: grayscale(0);
+    box-shadow: 0 0 10px #fff;
+
+}
+
+#thumbnails img:hover {
+    filter: grayscale(0);
+}
+
+#thumbnails img:hover,
+#thumbnails img.active {
+    scale: 1.05;
+    box-shadow: 0 0 10px #fff;
+    z-index: 1;
+    transform: translateX(10px);
+    
+}
+
+#thumbnails img:active {
+    scale: 1;
 }
 
 #thumbnails img:first-child {
