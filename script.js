@@ -32,5 +32,23 @@ const images = document.querySelectorAll('#gallery img');
 console.log(images);
 
 // Assegnamo active alla prima immagine per vederla
-images[0].className = 'active';
+let activeIndex = 0;
+images[activeIndex].className = 'active';
+
+// # Fase di gestione eventi
+leftButton.addEventListener('click', function () {
+    images[activeIndex].classList.remove('active');
+
+    activeIndex--;
+
+    images[activeIndex].classList.add('active');
+})
+
+rightButton.addEventListener('click', function () {
+    images[activeIndex].classList.remove('active');
+
+    activeIndex++;
+
+    images[activeIndex].classList.add('active');
+})
 
