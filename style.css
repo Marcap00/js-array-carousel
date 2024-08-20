@@ -18,21 +18,31 @@ img {
 }
 
 /* # GENERICS */
+
+
+/* # CAROUSEL */
 #carousel {
     min-height: 500px;
     width: 70%;
     margin: 0 auto;
 }
 
-#gallery {
+/*  # GALLERY */
+
+#carousel {
     position: relative;
 }
 
-/* #gallery img {
+#gallery img {
     border-radius: 20px;
-} */
+    display: none;
+}
 
-#gallery i {
+#gallery img.active {
+    display: block;
+}
+
+#carousel i {
     color: white;
 
     cursor: pointer;
